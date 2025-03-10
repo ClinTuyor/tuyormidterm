@@ -74,4 +74,6 @@ function openEditForm(id) {
             event.preventDefault();
 
             const updatedName = document.getElementById('taskName').value;
-           
+        }
+    }
+}
