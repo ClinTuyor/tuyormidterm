@@ -1,0 +1,23 @@
+{
+  "name": "tuyormidterm",
+  "version": "1.0.0",
+  "main": "question2.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ClinTuyor/tuyormidterm.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ClinTuyor/tuyormidterm/issues"
+  },
+  "homepage": "https://github.com/ClinTuyor/tuyormidterm#readme",
+  "description": "",
+  "dependencies": {
+    "express": "^4.21.2"
+  }
+}
