@@ -4,6 +4,6 @@ function filterEvenNumbers(numbers) {
 }
 // Example usage
 const inputArray = [1, 2, 3, 4, 5, 6]; // Input array of numbers
-const evenNumbers = filterEvenNumbers(inputArray); // Call the function
+const evenNumbers = filterEvenNumbers(inputArray);
 
 console.log("Even numbers:", evenNumbers);
