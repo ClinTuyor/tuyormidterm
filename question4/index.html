@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ToDo CRUD</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>ToDo Manager</h1>
+
+        <!-- Form to add a new task -->
+        <form id="taskForm">
+            <input type="text" id="taskName" placeholder="Task Name" required>
+            <input type="text" id="taskDescription" placeholder="Task Description" required>
+            <button type="submit">Add Task</button>
+        </form>
+
+        <!-- Display all tasks -->
+        <div id="taskList"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
