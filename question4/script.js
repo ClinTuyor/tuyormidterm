@@ -51,24 +51,27 @@ function renderTasks() {
                 <strong>${task.name}</strong>
                 <p>${task.description}</p>
             </div>
-            <button onclick="deleteTask(${task.id})">Delete</button>
+            <div>
+                <button class="edit" onclick="openEditForm(${task.id})">Edit</button>
+                <button class="delete" onclick="deleteTask(${task.id})">Delete</button>
+            </div>
         `;
         taskList.appendChild(taskElement);
     });
 }
 
-// Event listener for the form submission
-document.getElementById('taskForm').addEventListener('submit', function (event) {
-    event.preventDefault();
+// Function to open the edit form
+function openEditForm(id) {
+    const task = tasks.find(task => task.id === id);
+    if (task) {
+        // Populate the form with the task details
+        document.getElementById('taskName').value = task.name;
+        document.getElementById('taskDescription').value = task.description;
 
-    const taskName = document.getElementById('taskName').value;
-    const taskDescription = document.getElementById('taskDescription').value;
+        // Change the form's submit button to "Update Task"
+        const form = document.getElementById('taskForm');
+        form.onsubmit = function (event) {
+            event.preventDefault();
 
-    if (taskName && taskDescription) {
-        addTask(taskName, taskDescription);
-        document.getElementById('taskForm').reset();
-    }
-});
-
-// Initial render of tasks
-renderTasks();
+            const updatedName = document.getElementById('taskName').value;
+           
